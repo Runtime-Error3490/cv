@@ -3,17 +3,45 @@
     padding: 0;
     box-sizing: border-box;
 }
-@keyframes opacityChange{
-    0%,100%{
-        opacity: 0.7;
-    }
-    25%,50%{
-        opacity: 0.5;
-    }
+@keyframes gradientLoop {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
-img{
-        object-fit: cover;
+
+@keyframes glowing {
+    0%, 100% {
+      text-shadow: 0 0 10px #131212;
+    }
+    50% {
+      text-shadow: 0 0 5px #d6f0d6, 0 0 10px #d6f0d6, 0 0 15px #d6f0d6, 0 0 20px #d6f0d6, 0 0 25px #d6f0d6, 0 0 30px #d6f0d6, 0 0 35px #d6f0d6;
+    }
+  }
+  
+.navbar_color{
+    background: #03030377;
+}
+.glow {
+    color: #fff;
+    text-shadow: 0 0 30px #e4ebe4;
+    animation: glowing 2s infinite ease-in-out ;}
+img {
+    width: 100%; /* Make the image width responsive to the container */
+    height: 100%; /* Maintain the aspect ratio */
+    object-fit:cover; /* Cover the container without distorting aspect ratio */
+}
+.carousel_section{
+    background: #03030377;
+    background-size: 400% 400%;
+    animation: gradientLoop 15s ease-in infinite;  
+
 }
 .carousel-item{
-    height: 40rem;
+    width:35rem;
+    height: 35rem;
+}
+.website_Details{
+    background: linear-gradient(90deg, #03030377 3%, #151025c8 19%, #11051b6c 33%,#03030377 88%);
+    background-size: 400% 400%;
+    animation: gradientLoop 15s ease-in infinite;  
 }
