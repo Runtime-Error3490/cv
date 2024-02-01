@@ -3,35 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
-@keyframes gradientLoop {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 
-@keyframes glowing {
+@keyframes pulsate {
     0%, 100% {
-      text-shadow: 0 0 10px #131212;
+      font-size: 16px; /* Initial size */
     }
     50% {
-      text-shadow: 0 0 5px #d6f0d6, 0 0 10px #d6f0d6, 0 0 15px #d6f0d6, 0 0 20px #d6f0d6, 0 0 25px #d6f0d6, 0 0 30px #d6f0d6, 0 0 35px #d6f0d6;
+      font-size: 20px; /* Increased size */
     }
   }
   
+  h1{
+    font-family: 'Oswald', sans-serif;
+  }
 .navbar_color{
-    background: #03030377;
+    background: #C4DFDF;
 }
 .glow {
     color: #fff;
     text-shadow: 0 0 30px #e4ebe4;
-    animation: glowing 2s infinite ease-in-out ;}
+    animation: pulsate 2s infinite ease-in-out ;
+}
+.name_text{
+    font-family: 'Sixtyfour', sans-serif;
+}
 img {
     width: 100%; /* Make the image width responsive to the container */
     height: 100%; /* Maintain the aspect ratio */
     object-fit:cover; /* Cover the container without distorting aspect ratio */
 }
 .carousel_section{
-    background: #03030377;
+    background: #D2E9E9;
     background-size: 400% 400%;
     animation: gradientLoop 15s ease-in infinite;  
 
@@ -41,7 +43,34 @@ img {
     height: 35rem;
 }
 .website_Details{
-    background: linear-gradient(90deg, #03030377 3%, #151025c8 19%, #11051b6c 33%,#03030377 88%);
+    background: #E3F4F4;
     background-size: 400% 400%;
     animation: gradientLoop 15s ease-in infinite;  
+}
+.skill_section{
+    height:10rem;
+}
+.skill3 {
+    font-family: 'Space Grotesk', sans-serif;
+    transition: font-size 0.3s ease, box-shadow 0.3s ease; /* Add transition for font-size and box-shadow */
+}
+
+.skill3:hover {
+    font-size: large;
+    box-shadow: 5px 10px 10px rgba(25, 23, 23, 0.3); /* Add a box shadow on hover */
+}
+
+
+.footer_Section{
+    background: #E3F4F4;
+}
+img {
+    width: 2rem;
+    height: 2rem;
+    transition: width 0.3s ease, box-shadow 0.3s ease; /* Apply transition to width and box-shadow */
+}
+
+img:hover {
+    width: 3rem;
+    box-shadow: 5px 10px 10px rgba(255, 254, 254, 0.3); /* Add box-shadow on hover */
 }
